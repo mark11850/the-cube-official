@@ -8,7 +8,7 @@ public class mousemovement : MonoBehaviour
     
     public Transform playerbody;
 
-    float xRotation = 0f;
+    float xRotation = 100f;
         
 
 
@@ -21,14 +21,14 @@ public class mousemovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float mouseX = Input.GetAxis("mouseX") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("mouseY") * mouseSensitivity * Time.deltaTime;
+        float MouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        float MouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        xRotation -= mouseY;
+        xRotation -= MouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f); 
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);  
-        playerbody.Rotate(Vector3.up * mouseX);
+        playerbody.Rotate(Vector3.up * MouseX);
         
     }
 }

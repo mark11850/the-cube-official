@@ -6,12 +6,16 @@ using UnityEngine;
 public class thecube : MonoBehaviour
 {
 
+
     Rigidbody rb;
+
     private float turningspeed = 180;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
 
     }
 
